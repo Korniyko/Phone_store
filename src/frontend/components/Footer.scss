@@ -1,0 +1,30 @@
+footer {
+    background-color: black;
+    padding-bottom: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+
+
+    .contact {
+        padding-top: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .footerCotainer {
+        margin-top: 80px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+}

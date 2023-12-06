@@ -1,0 +1,40 @@
+.categoriesColors {
+    margin-top: 208px;
+    text-align: center;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        width: 557px;
+        margin: 0 auto;
+        margin-bottom: 80px;
+
+    }
+
+    .categories {
+        margin-bottom: 180px;
+        gap: 40px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background: rgba(217, 217, 217, 0.00);
+            border: 1px solid #777;
+            border-radius: 20px;
+            gap: 40px;
+            transition: transform 0.3s ease;
+            padding: 25px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    }
+
+}

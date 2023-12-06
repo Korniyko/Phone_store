@@ -1,0 +1,28 @@
+.containerAudio {
+    background-image: url(http://localhost:6500/img/djMen.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+
+    .containerAudio::after {
+        content: '';
+        position: absolute;
+        background-image: url(http://localhost:6500/img/soundBass.svg);
+        background: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: -250px;
+        height: 150vh;
+
+    }
+
+
+    .soundBass {
+
+        min-height: 200vb;
+    }
+}

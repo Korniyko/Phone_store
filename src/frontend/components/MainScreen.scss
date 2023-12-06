@@ -1,0 +1,42 @@
+main {
+    z-index: -2;
+    position: relative;
+
+    .mainScreen {
+        h1 {
+            font-size: 210px;
+            font-weight: 700;
+            position: absolute;
+            padding-top: 110px;
+
+            .spanPod {
+                position: relative;
+                z-index: -1;
+            }
+
+            .spanS {
+                display: inline-block;
+                transform: translateY(60px);
+            }
+
+            .spanM {
+                display: inline-block;
+                transform: translate(-57px, 275px);
+            }
+
+            .spanAx {
+                display: inline-block;
+                transform: translate(-128px, 415px);
+                z-index: -1;
+                position: relative;
+
+            }
+        }
+    }
+
+    .headerImage {
+        text-align: center;
+
+    }
+
+}

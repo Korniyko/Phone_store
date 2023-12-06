@@ -1,0 +1,32 @@
+.productDescription {
+    text-align: center;
+
+    h1 {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        width: 653px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .containerDescription {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        margin-bottom: 180px;
+
+        p {
+            width: 230px;
+            margin-bottom: 80px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+        }
+    }
+}

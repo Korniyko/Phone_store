@@ -1,0 +1,97 @@
+[
+    {
+        "manufactor": "AirPods",
+        "variatins": [
+            {
+                "id": 1,
+                "color": "blue",
+                "mainImg": "http://localhost:6500/img/airpods-blu.png",
+                "buttonImg": "http://localhost:6500/img/buttonBlue.png",
+                "descriptionImg": "http://localhost:6500/img/descriptionBlue.png",
+                "caseImg": "http://localhost:6500/img/caseBlu.png",
+                "backgroundColor": "linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%)",
+                "backgroundColorHeader": "rgb(202, 219, 235)"
+            },
+            {
+                "id": 2,
+                "color": "green",
+                "mainImg": "http://localhost:6500/img/airpods-green.png",
+                "buttonImg": "http://localhost:6500/img/buttonGreen.png",
+                "caseImg": "http://localhost:6500/img/caseGreen.png",
+                "descriptionImg": "http://localhost:6500/img/descriptionGreen.png",
+                "backgroundColor": "linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0.00) 100%)",
+                "backgroundColorHeader": "rgb(221, 234, 217)"
+            },
+            {
+                "id": 3,
+                "color": "pink",
+                "mainImg": "http://localhost:6500/img/airpods-Pink.png",
+                "buttonImg": "http://localhost:6500/img/buttonPink.png",
+                "caseImg": "http://localhost:6500/img/casePink.png",
+                "descriptionImg": "http://localhost:6500/img/descriptionPink.png",
+                "backgroundColor": "linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0.00) 100%)",
+                "backgroundColorHeader": "rgb(243, 214, 209)"
+            },
+            {
+                "id": 4,
+                "color": "white",
+                "mainImg": "http://localhost:6500/img/airpods-white.png",
+                "buttonImg": "http://localhost:6500/img/buttonWhite.png",
+                "caseImg": "http://localhost:6500/img/caseWhite.png",
+                "descriptionImg": "http://localhost:6500/img/descriptionWhite.png",
+                "backgroundColor": "linear-gradient(180deg, #FAFAFA 0%, rgba(235, 235, 235, 0.00) 100%)",
+                "backgroundColorHeader": "rgb(250, 250, 250)"
+            },
+            {
+                "id": 5,
+                "color": "black",
+                "mainImg": "http://localhost:6500/img/airpods-black.png",
+                "buttonImg": "http://localhost:6500/img/buttonBlack.png",
+                "caseImg": "http://localhost:6500/img/caseBlack.png",
+                "descriptionImg": "http://localhost:6500/img/descriptionBlack.png",
+                "backgroundColor": "linear-gradient(180deg, #B6B6B6 0%, rgba(235, 235, 235, 0.00) 100%)",
+                "backgroundColorHeader": "rgb(182, 182, 182)"
+            }
+        ]
+    },
+    {
+        "manufactor": "Apple iPhone",
+        "variatins": [
+            {
+                "id": 6,
+                "name": "Apple iPhone 15 Pro",
+                "color": "black",
+                "mainImg": "https://i.citrus.world/imgcache/size_800/uploads/shop/1/6/1699454393-opt.webp",
+                "price": 1300
+            },
+            {
+                "id": 7,
+                "name": "Apple iPhone 15",
+                "color": "pink",
+                "mainImg": "https://i.citrus.world/imgcache/size_800/uploads/shop/1/6/1699449434-728977-1.webp",
+                "price": 1100
+            },
+            {
+                "id": 8,
+                "name": "Apple iPhone 13",
+                "color": "blue",
+                "mainImg": "https://i.citrus.world/imgcache/size_800/uploads/shop/1/6/1699353017-opt.webp",
+                "price": 850
+            },
+            {
+                "id": 9,
+                "name": "Apple iPhone 12",
+                "color": "red",
+                "mainImg": "https://i.citrus.world/imgcache/size_800/uploads/shop/1/6/1699279229-opt.webp",
+                "price": 680
+            },
+            {
+                "id": 10,
+                "name": "Apple iPhone 11",
+                "color": "yellow",
+                "mainImg": "https://i.citrus.world/imgcache/size_800/uploads/shop/1/6/1699348024-opt.webp",
+                "price": 440
+            }
+        ]
+    }
+]

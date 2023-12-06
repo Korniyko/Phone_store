@@ -1,0 +1,32 @@
+.basketContainers {
+    padding-top: 70px;
+    padding-bottom: 250px;
+    background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+
+    h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .products {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+
+        .product {
+            img {
+                width: 270px;
+            }
+
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            .productName {
+                flex-direction: column;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}

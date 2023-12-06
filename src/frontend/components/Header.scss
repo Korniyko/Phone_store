@@ -1,0 +1,37 @@
+body {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 10px;
+}
+
+header {
+    background-color: rgb(202, 219, 235);
+
+    .headers {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 35px;
+
+        .menuList {
+            display: flex;
+            align-items: center;
+
+            .menuListItem {
+                padding-right: 40px;
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+
+}
