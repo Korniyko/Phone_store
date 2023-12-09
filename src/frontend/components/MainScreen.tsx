@@ -1,15 +1,15 @@
 import React from "react";
 import './MainScreen.scss'
-import { Variation } from "../../types";
+import { SelectedItemState, Variation } from "../../types";
 
 
 type MainScreenProps = {
-    selected: Variation
+    selected: SelectedItemState  
 }
 const MainScreen = ({ selected }: MainScreenProps) => {
 
     const headerStyle = {
-        background: selected.backgroundColor,
+        background: selected?.backgroundColor,
     };
   
 
@@ -26,7 +26,7 @@ const MainScreen = ({ selected }: MainScreenProps) => {
                 </h1>
                 <div className="headerImage ">
 
-                    <img src={selected.mainImg} alt="airpodsBlu" />
+                    <img src={selected?.mainImg} alt="airpodsBlu" />
                 </div>
             </div>
         </main>

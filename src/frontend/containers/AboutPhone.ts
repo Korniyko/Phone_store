@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AboutPhone from '../components/AboutPhone';
-import { countPhone, setPhoneToBasket } from '../store/actions';
+import {  setPhoneToBasket } from '../store/actions';
 
 
 const mapStateToProps = (state:any) => {
@@ -12,7 +12,6 @@ const mapStateToProps = (state:any) => {
 
 const mapDispatchToProps = (dispatch:any) => ({
     setPhoneToBasket : (phone) => dispatch(setPhoneToBasket(phone)),
-    countPhone : (count) => dispatch(countPhone(count)),
 
 })
 

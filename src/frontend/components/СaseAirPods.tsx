@@ -1,10 +1,10 @@
 
 import React from "react";
 import './СaseAirPods.scss'
-import { Variation } from "../../types";
+import { SelectedItemState } from "../../types";
 
 type CaseProps = {
-    selected:Variation
+    selected:SelectedItemState
 }
 
 const СaseAirPods = ({selected}:CaseProps) => {
@@ -15,7 +15,7 @@ const СaseAirPods = ({selected}:CaseProps) => {
             <h1>It even preserves the battery.</h1>
             <p>When stored in the sleek and lightweight Smart Case , AirPods Max enter a low-power state to save energy.</p>
             <div className="caseImg">
-                <img src={selected.caseImg} alt="caseBlu" />
+                <img src={selected?.caseImg} alt="caseBlu" />
             </div>
             <h1>Stayin' alive, stayin' alive.</h1>
             <h3>20</h3>

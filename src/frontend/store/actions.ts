@@ -52,11 +52,4 @@ export const setPhoneToBasket = (phone) => {
         
     };
 } 
-export const countPhone = (countPhone) => {
 
-    
-    return {
-        type: SET_COUNT_PHONE,
-        countPhone
-    };
-} 

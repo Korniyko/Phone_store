@@ -6,21 +6,21 @@ import { Variation } from "../../types";
 import { useHistory } from "react-router-dom";
 
 type HeaderProps = {
-    selected: Variation
+    selected: Variation | null | undefined
 }
 const Header = ({ selected }: HeaderProps) => {
 
     const headerStyle = {
-        background: selected.backgroundColorHeader,
+        background: selected?.backgroundColorHeader,
     };
-    
+
     const history = useHistory()
 
     return (
         <header style={headerStyle} >
             <div className="headers container">
                 <div className="logo">
-                    <img src={Logo} alt="logo"  onClick={() => { history.push('/')}}/>
+                    <img src={Logo} alt="logo" onClick={() => { history.push('/') }} />
                 </div>
                 <nav className="menu">
                     <ul className="menuList">
@@ -34,10 +34,10 @@ const Header = ({ selected }: HeaderProps) => {
                             <a className="menuListItem" href="#">Contacts</a>
                         </li>
                         <li >
-                            <Button label='Login' onClick={() => { history.push('/login')}} />
+                            <Button label='Login' onClick={() => { history.push('/login') }} />
                         </li>
                         <li >
-                            <Button label='Basket' onClick={() => { history.push('/basket')}} />
+                            <Button label='Basket' onClick={() => { history.push('/basket') }} />
                         </li>
                     </ul>
                 </nav>

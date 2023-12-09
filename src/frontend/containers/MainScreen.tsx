@@ -5,7 +5,7 @@ import MainScreen from '../components/MainScreen';
 
 const mapStateToProps = (state: any) => {
     return {
-        selected: state.selected || null
+        selected: state.selected 
     }
 }
 

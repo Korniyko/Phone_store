@@ -10,21 +10,19 @@ import { Phone } from "../../types";
 type AboutPhoneProps = {
     descriptionPhone: Phone;
     setPhoneToBasket: (phone:Phone) => void
-    countPhone: (count:number) => void
 }
 
 
-const AboutPhone = ({ descriptionPhone, setPhoneToBasket, countPhone }: AboutPhoneProps) => {
+const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => {
 
-    const [iscountPhone, setCountPhone] = useState(1);
+ 
 
-    console.log(descriptionPhone);
+   
 
     const addToBasketPhone = (phone:Phone) => {
+        
         setPhoneToBasket(phone)
-        countPhone(iscountPhone)
 
-        setCountPhone(iscountPhone + 1)
     }
 
     return (
@@ -36,13 +34,6 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket, countPhone }: AboutPho
                 {<Button label="Yellow" />}
                 {<Button label="Red" />}
                 {<Button label="Blue" />}
-            </div>
-            <div className="filterPhone ">
-                {<Button label="16" />}
-                {<Button label="64" />}
-                {<Button label="128" />}
-                {<Button label="256" />}
-
             </div>
             <div className="products container">
                 <div className="product">

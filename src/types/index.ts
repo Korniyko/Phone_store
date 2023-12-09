@@ -1,5 +1,5 @@
 
-export type SelectedItemState = Variation | [] | undefined
+export type SelectedItemState = Variation | null | undefined
 
 
 
@@ -24,14 +24,13 @@ export type Variation = {
     caseImg: string;
     backgroundColor: string;
     backgroundColorHeader: string
-
 };
 
 // export type ValueReagistration = {
 //     loginValue: string,
 //     passwordValue: string 
 // }
-export type ProductsPhone = Phone |  []
+
 
 export type Phone = {
     id: number;
@@ -40,4 +39,15 @@ export type Phone = {
     color: string;
     price: number;
 };
+export type BasketItem = Phone & {
+    count: number;
+};
+
+
+
+export type ReducerPhoneDescription = Phone | null | undefined
+export type ReducerPhoneProducts = Phone[] 
+export type ReducerBasketProducts =BasketItem[] 
+    
+
 

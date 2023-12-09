@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Basket.scss";
-import { ProductsPhone } from "../../types";
+import { BasketItem } from "../../types";
 
 type BasketProps = {
-    basketProducts: ProductsPhone |  [],
+    basketProducts: BasketItem[],
     countPhone: number,
   
 }
@@ -26,7 +26,7 @@ const Basket = ({ basketProducts, countPhone }: BasketProps) => {
                             <div className="productName">
                                 <h1>{item.name}</h1>
                                 <h3>{(item.price * countPhone)}$</h3>
-                                <h1>Count Products {countPhone}</h1>
+                                <h1>Count Products {item.count}</h1>
                             </div>
                         </div>
                     ))}

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state:any) => {
     return {
-        selected: state.selected || null
+        selected: state.selected 
     }
 }
 

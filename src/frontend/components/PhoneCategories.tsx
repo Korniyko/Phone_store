@@ -16,7 +16,8 @@ const PhoneCategories = ({ productsPhone, addToAboutPhone }: PhoneProps) => {
 
         const resultFilter = productsPhone.find(variation => variation.id === id)
 
-
+        console.log(resultFilter,"resultfilter");
+        
         addToAboutPhone(resultFilter)
 
         history.push('/aboutPhone')
