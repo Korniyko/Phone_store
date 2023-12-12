@@ -12,6 +12,7 @@ const mapStateToProps = (state:any) => {
 
 const mapDispatchToProps = (dispatch:any) => ({
     addToAboutPhone : (resultFilter) => dispatch(addToAboutPhone(resultFilter)),
+   
 
 })
 

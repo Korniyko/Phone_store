@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import Basket from '../components/Basket';
+import { updateBasket } from '../store/actions';
+import { BasketItem } from '../../types';
 
 
 const mapStateToProps = (state:any) => {
@@ -12,7 +14,8 @@ const mapStateToProps = (state:any) => {
 
 
 const mapDispatchToProps = (dispatch:any) => ({
-   
+    updateBasket : (products:BasketItem[]) => dispatch(updateBasket(products)),
+
 
 })
 

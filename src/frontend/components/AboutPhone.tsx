@@ -4,23 +4,22 @@ import Button from "./Button";
 import { Phone } from "../../types";
 
 
-
-
-
 type AboutPhoneProps = {
     descriptionPhone: Phone;
-    setPhoneToBasket: (phone:Phone) => void
+    setPhoneToBasket: (phone: Phone) => void
 }
 
 
 const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => {
 
- 
+    const addToBasketPhone = (phone: Phone) => {
 
-   
+        // const productId = descriptionPhone.id;
 
-    const addToBasketPhone = (phone:Phone) => {
-        
+        // const existingItems = JSON.parse(localStorage.getItem("basketItems") || "[]");
+        // existingItems.push(productId);
+        // localStorage.setItem("basketItems", JSON.stringify(existingItems));
+
         setPhoneToBasket(phone)
 
     }
@@ -28,17 +27,9 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
     return (
 
         <div className="phoneContainers ">
-            <div className="filterPhone ">
-                {<Button label="Pink" />}
-                {<Button label="Black" />}
-                {<Button label="Yellow" />}
-                {<Button label="Red" />}
-                {<Button label="Blue" />}
-            </div>
+
             <div className="products container">
                 <div className="product">
-
-
                     <img src={descriptionPhone.mainImg} alt={descriptionPhone.name} />
                     <div className="productName">
                         <h1>{descriptionPhone.name}</h1>
@@ -46,10 +37,6 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
                         {<Button label="Add to Basket" onClick={() => addToBasketPhone(descriptionPhone)} />}
                     </div>
                 </div >
-
-
-
-
             </div>
         </div>
 

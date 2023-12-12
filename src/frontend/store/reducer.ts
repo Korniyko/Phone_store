@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
 import { BasketItem, Phone, ProductsState, ReducerBasketProducts, ReducerPhoneDescription, ReducerPhoneProducts, SelectedItemState } from "../../types";
-import { ADD_NEW_COLOR, ADD_TO_ABOUT_PHONE, SET_COLOR, SET_COUNT_PHONE, SET_PHONE_TO_BASKET, SET_PRODUCTS_PHONE, SET_SELECTED_ITEM } from "./actions";
+import { ADD_NEW_COLOR, ADD_TO_ABOUT_PHONE, SET_COLOR, SET_PHONE_TO_BASKET, SET_PRODUCTS_PHONE, SET_SELECTED_ITEM, UPDATE_BASKET } from "./actions";
 
 
 export const selected: Reducer<SelectedItemState> = (state: SelectedItemState | undefined, action): SelectedItemState => {
@@ -44,15 +44,15 @@ export const phoneProducts: Reducer<ReducerPhoneProducts> = (state: ReducerPhone
     return []
   }
   switch (action.type) {
-
     case SET_PRODUCTS_PHONE:
-      return action.object
-
+      return action.object;
+   
 
     default:
       return state;
   };
 }
+
 export const descriptionPhone: Reducer<ReducerPhoneDescription> = (state: ReducerPhoneDescription | undefined, action): ReducerPhoneDescription => {
   if (!state && state === undefined) {
     return null
@@ -83,7 +83,6 @@ export const basketProducts: Reducer<ReducerBasketProducts> = (state: ReducerBas
       }
 
       const uniqueItem: BasketItem | undefined = state.find((item) => item.id === newPhone.id);
-
       if (uniqueItem) {
 
         const resultat = state.map((el) => {
@@ -97,13 +96,14 @@ export const basketProducts: Reducer<ReducerBasketProducts> = (state: ReducerBas
           return el
         })
 
-
-
         return resultat;
       } else {
 
         return [...state, newPhone];
       }
+    case UPDATE_BASKET:
+
+      return action.products
 
     default:
       return state;

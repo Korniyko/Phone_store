@@ -1,4 +1,4 @@
-import { Product, Variation } from "../../types";
+import { BasketItem, Product, Variation } from "../../types";
 export const SET_COLOR = 'SET_COLOR';
 export const SET_SELECTED_ITEM = 'SET_SET_SELECTED_ITEM';
 export const ADD_NEW_COLOR = 'ADD_NEW_COLOR';
@@ -6,6 +6,8 @@ export const SET_PRODUCTS_PHONE = 'SET_PRODUCTS_PHONE';
 export const ADD_TO_ABOUT_PHONE = 'ADD_TO_ABOUT_PHONE';
 export const SET_PHONE_TO_BASKET = 'SET_PHONE_TO_BASKET';
 export const SET_COUNT_PHONE = 'SET_COUNT_PHONE';
+export const UPDATE_BASKET = 'UPDATE_BASKET';
+export const FILTER_PHONE_COLOR = 'FILTER_PHONE_COLOR';
 
 
 export const setColor = (object: Product[]) => {
@@ -45,11 +47,19 @@ export const addToAboutPhone = (phone) => {
 } 
 export const setPhoneToBasket = (phone) => {
 
-    
     return {
         type: SET_PHONE_TO_BASKET,
         phone,
-        
     };
 } 
+export const updateBasket = (products:BasketItem[]) => {
+
+    return {
+        type: UPDATE_BASKET,
+        products,
+    };
+} 
+
+
+
 
