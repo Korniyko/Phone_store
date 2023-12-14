@@ -4,23 +4,31 @@ import Button from "./Button";
 import { Phone } from "../../types";
 
 
+
 type AboutPhoneProps = {
     descriptionPhone: Phone;
-    setPhoneToBasket: (phone: Phone) => void
+    setPhoneToBasket: (phone: Phone, isInpuntCount: number) => void
 }
 
 
 const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => {
 
-    const addToBasketPhone = (phone: Phone) => {
+    const [isInpuntCount, setInpuntCount] = useState(1)
 
-        // const productId = descriptionPhone.id;
+    const addToBasketPhone = (phone: Phone, isInpuntCount: number) => {
 
-        // const existingItems = JSON.parse(localStorage.getItem("basketItems") || "[]");
-        // existingItems.push(productId);
-        // localStorage.setItem("basketItems", JSON.stringify(existingItems));
+        setPhoneToBasket(phone, isInpuntCount)
 
-        setPhoneToBasket(phone)
+    }
+    const inputPlus = () => {
+        const result = isInpuntCount + 1
+        setInpuntCount(result)
+    }
+    const inputMinus = () => {
+        const result = isInpuntCount - 1
+        if (result >= 1) {
+            setInpuntCount(result)
+        }
 
     }
 
@@ -34,7 +42,12 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
                     <div className="productName">
                         <h1>{descriptionPhone.name}</h1>
                         <h3>{descriptionPhone.price}$</h3>
-                        {<Button label="Add to Basket" onClick={() => addToBasketPhone(descriptionPhone)} />}
+                        <div className="input">
+                            <div onClick={() => inputPlus()}>+</div>
+                            <input type="text" value={isInpuntCount} onChange={() => { }} />
+                            <div onClick={() => inputMinus()}>-</div>
+                        </div>
+                        {<Button label="Add to Basket" onClick={() => addToBasketPhone(descriptionPhone, isInpuntCount)} />}
                     </div>
                 </div >
             </div>

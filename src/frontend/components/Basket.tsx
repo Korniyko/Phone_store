@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+
+import { HiXCircle } from "react-icons/hi";
 import "./Basket.scss";
 import { BasketItem } from "../../types";
+import React from "react";
 
 type BasketProps = {
     basketProducts: BasketItem[],
@@ -29,14 +31,12 @@ const Basket = ({ basketProducts, updateBasket }: BasketProps) => {
             return item;
         }).filter((item) => item !== null) as BasketItem[];
 
-        // const basketlocalStorage = JSON.parse(localStorage.getItem("basketItems") || "[]");
-        // const newLocalStorage = basketlocalStorage.filter((itemId: number) => itemId !== idRemove);
-
-        // localStorage.setItem("basketItems", JSON.stringify(newLocalStorage));
-
-
         updateBasket(newBasketProducts)
     };
+    const removeAllFromBasket = (idRemoveAll: number) => {
+        const newBasketProducts = basketProducts.filter((item) => item.id !== idRemoveAll)
+        updateBasket(newBasketProducts)
+    }
 
     const isBasketEmpty = basketProducts.length === 0;
 
@@ -57,6 +57,7 @@ const Basket = ({ basketProducts, updateBasket }: BasketProps) => {
                             <div className="removeFromBasket" onClick={() => removeFromBasket(item.id)}>
                                 X
                             </div>
+                            <div className="removeAllFromBasket" onClick={() => removeAllFromBasket(item.id)}><HiXCircle className="icon" /></div>
                         </div>
                     ))}
                 </div>

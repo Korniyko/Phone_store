@@ -11,7 +11,7 @@ const mapStateToProps = (state:any) => {
 
 
 const mapDispatchToProps = (dispatch:any) => ({
-    setPhoneToBasket : (phone) => dispatch(setPhoneToBasket(phone)),
+    setPhoneToBasket : (phone,isInpuntCount) => dispatch(setPhoneToBasket(phone,isInpuntCount)),
 
 })
 

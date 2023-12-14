@@ -77,9 +77,10 @@ export const basketProducts: Reducer<ReducerBasketProducts> = (state: ReducerBas
     case SET_PHONE_TO_BASKET:
 
       const phone = action.phone
+      const isInpuntCount =action.isInpuntCount
       const newPhone = {
         ...phone,
-        count: 1
+        count: isInpuntCount
       }
 
       const uniqueItem: BasketItem | undefined = state.find((item) => item.id === newPhone.id);

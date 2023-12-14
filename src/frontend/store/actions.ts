@@ -45,11 +45,12 @@ export const addToAboutPhone = (phone) => {
         phone
     };
 } 
-export const setPhoneToBasket = (phone) => {
+export const setPhoneToBasket = (phone,isInpuntCount) => {
 
     return {
         type: SET_PHONE_TO_BASKET,
         phone,
+        isInpuntCount
     };
 } 
 export const updateBasket = (products:BasketItem[]) => {

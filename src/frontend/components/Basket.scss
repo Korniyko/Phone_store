@@ -30,6 +30,13 @@
             .removeFromBasket{
                 cursor: pointer;
             }
+            .removeAllFromBasket{
+                .icon:hover{
+                    transform: scale(1.04);
+                   color: red;
+                   cursor: pointer;
+                }
+            }
 
         }
     }

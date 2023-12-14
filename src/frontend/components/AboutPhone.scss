@@ -23,6 +23,20 @@
                 display: flex;
                 gap: 10px;
             }
+
+            .input {
+                display: flex;
+                font-size: 35px;
+
+                input {
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 10px;
+                    background-color: white;
+                    color: black;
+
+                }
+            }
         }
     }
 }
