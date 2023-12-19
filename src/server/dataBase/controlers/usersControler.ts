@@ -1,5 +1,6 @@
 import { Op } from "sequelize";
 import type { UsersInterface } from "../models/users";
+import { CredentialType } from "../../../types";
 const { sequelize } = require("../models");
 const UsersModule = require("../models/users");
 
@@ -36,7 +37,7 @@ class UsersControler {
         }
     }
 
-    public async getUser(userData: UsersInterface) {
+    public async getUser(userData: CredentialType) {
 
         try {
             const loginUser = await this.usersModel.findOne({

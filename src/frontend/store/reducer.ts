@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
-import { BasketItem, Phone, ProductsState, ReducerBasketProducts, ReducerPhoneDescription, ReducerPhoneProducts, SelectedItemState } from "../../types";
-import { ADD_NEW_COLOR, ADD_TO_ABOUT_PHONE, SET_COLOR, SET_PHONE_TO_BASKET, SET_PRODUCTS_PHONE, SET_SELECTED_ITEM, UPDATE_BASKET } from "./actions";
+import { BasketItem, Phone, ProductsState, ReducerBasketProducts, ReducerPhoneDescription, ReducerPhoneProducts, ReducerUser, SelectedItemState } from "../../types";
+import { ADD_NEW_COLOR, ADD_TO_ABOUT_PHONE, DELETE_USER, SET_COLOR, SET_PHONE_TO_BASKET, SET_PRODUCTS_PHONE, SET_SELECTED_ITEM, SET_USER, UPDATE_BASKET } from "./actions";
 
 
 export const selected: Reducer<SelectedItemState> = (state: SelectedItemState | undefined, action): SelectedItemState => {
@@ -46,7 +46,7 @@ export const phoneProducts: Reducer<ReducerPhoneProducts> = (state: ReducerPhone
   switch (action.type) {
     case SET_PRODUCTS_PHONE:
       return action.object;
-   
+
 
     default:
       return state;
@@ -77,7 +77,7 @@ export const basketProducts: Reducer<ReducerBasketProducts> = (state: ReducerBas
     case SET_PHONE_TO_BASKET:
 
       const phone = action.phone
-      const isInpuntCount =action.isInpuntCount
+      const isInpuntCount = action.isInpuntCount
       const newPhone = {
         ...phone,
         count: isInpuntCount
@@ -110,7 +110,24 @@ export const basketProducts: Reducer<ReducerBasketProducts> = (state: ReducerBas
       return state;
   }
 };
+export const user: Reducer<ReducerUser> = (state: ReducerUser | undefined, action): ReducerUser => {
+  if (!state && state === undefined) {
+    return null
+  }
+  switch (action.type) {
+    case SET_USER:
+  
+    
+      return action.user 
+  
+    case DELETE_USER:
+      return action.deleteUser
 
+
+    default:
+      return state;
+  };
+}
 
 
 

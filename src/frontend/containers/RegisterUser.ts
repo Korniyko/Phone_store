@@ -6,7 +6,9 @@ import RegisterUser from '../components/RegisterUser';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state: any) => {
-    return {}
+    return {
+        userProfile: state.user,
+    }
 }
 
 

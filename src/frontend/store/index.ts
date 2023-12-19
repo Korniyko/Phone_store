@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, compose, legacy_createStore as createStore } from "redux"
 import thunk from 'redux-thunk';
-import { descriptionPhone,basketProducts, phoneProducts, products, selected } from "./reducer";
+import { descriptionPhone,basketProducts, phoneProducts, products, selected,  user } from "./reducer";
 import createSessionStore from "./createSessionStore";
 
 
@@ -11,7 +11,8 @@ const reducers = combineReducers({
   selected,
   phoneProducts,
   descriptionPhone,
-  basketProducts
+  basketProducts,
+  user
   
 })
 const composeEnhancers = (process.env.NODE_ENV !== 'production' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)

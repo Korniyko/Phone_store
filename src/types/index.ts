@@ -1,3 +1,4 @@
+import { UsersInterface } from "../server/dataBase/models/users";
 
 export type SelectedItemState = Variation | null | undefined
 
@@ -43,11 +44,17 @@ export type BasketItem = Phone & {
     count: number;
 };
 
-
+export type CredentialType= {
+    login: string,
+    password:string
+}
 
 export type ReducerPhoneDescription = Phone | null | undefined
 export type ReducerPhoneProducts = Phone[] 
 export type ReducerBasketProducts =BasketItem[] 
+export type ReducerUser = User | null | undefined
     
 
+export type User = UsersInterface | null | undefined
+   
 

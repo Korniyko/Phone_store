@@ -3,6 +3,7 @@ import { HiXCircle } from "react-icons/hi";
 import "./Basket.scss";
 import { BasketItem } from "../../types";
 import React from "react";
+import Input from "./Input";
 
 type BasketProps = {
     basketProducts: BasketItem[],
@@ -37,7 +38,22 @@ const Basket = ({ basketProducts, updateBasket }: BasketProps) => {
         const newBasketProducts = basketProducts.filter((item) => item.id !== idRemoveAll)
         updateBasket(newBasketProducts)
     }
+    const plusProducts = (idPlus) => {
+        const newBasketProducts = basketProducts.map((item) => {
+            if (item.id === idPlus) {
 
+
+                const newObject = {
+                    ...item,
+                    count: item.count + 1
+                }
+
+                return newObject;
+
+            }
+        })
+        return updateBasket(newBasketProducts)
+    }
     const isBasketEmpty = basketProducts.length === 0;
 
     return (
@@ -54,9 +70,8 @@ const Basket = ({ basketProducts, updateBasket }: BasketProps) => {
                                 <h3>{(item.price * item.count)}$</h3>
                                 <h1>Count Products {item.count}</h1>
                             </div>
-                            <div className="removeFromBasket" onClick={() => removeFromBasket(item.id)}>
-                                X
-                            </div>
+
+                            {<Input minus={() => removeFromBasket(item.id)} showInput={false} plus={() => plusProducts(item.id)} />}
                             <div className="removeAllFromBasket" onClick={() => removeAllFromBasket(item.id)}><HiXCircle className="icon" /></div>
                         </div>
                     ))}

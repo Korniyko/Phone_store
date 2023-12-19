@@ -1,0 +1,14 @@
+.profile {
+    padding-top: 70px;
+    padding-bottom: 250px;
+    background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+
+    .profileLogin {
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

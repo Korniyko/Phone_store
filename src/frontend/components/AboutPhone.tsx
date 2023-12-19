@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./AboutPhone.scss";
 import Button from "./Button";
 import { Phone } from "../../types";
+import Input from "./Input";
 
 
 
@@ -21,6 +22,7 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
 
     }
     const inputPlus = () => {
+
         const result = isInpuntCount + 1
         setInpuntCount(result)
     }
@@ -29,6 +31,16 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
         if (result >= 1) {
             setInpuntCount(result)
         }
+
+    }
+    const funcOnChange = (event) => {
+
+        const integerRegex = /^\d+$/;
+
+        if (integerRegex.test(event.target.value)) {
+
+            setInpuntCount(event.target.value)
+        }  
 
     }
 
@@ -42,11 +54,13 @@ const AboutPhone = ({ descriptionPhone, setPhoneToBasket }: AboutPhoneProps) => 
                     <div className="productName">
                         <h1>{descriptionPhone.name}</h1>
                         <h3>{descriptionPhone.price}$</h3>
-                        <div className="input">
-                            <div onClick={() => inputPlus()}>+</div>
-                            <input type="text" value={isInpuntCount} onChange={() => { }} />
-                            <div onClick={() => inputMinus()}>-</div>
-                        </div>
+                        <Input
+                            value={isInpuntCount}
+                            showInput={true} 
+                            plus={inputPlus}
+                            minus={inputMinus}
+                            onChange={funcOnChange}
+                        />
                         {<Button label="Add to Basket" onClick={() => addToBasketPhone(descriptionPhone, isInpuntCount)} />}
                     </div>
                 </div >

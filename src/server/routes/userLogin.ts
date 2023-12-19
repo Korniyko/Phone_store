@@ -2,6 +2,10 @@ import { Request, Response } from "express"
 // import { createUser } from "../dataBase/controlers/usersControler"
 import { UsersInterface } from "../dataBase/models/users"
 import UsersControler from "../dataBase/controlers/usersControler"
+import { CredentialType } from "../../types"
+
+
+
 
 export const userLogin = async (req: Request, response: Response) => {
 
@@ -9,7 +13,8 @@ export const userLogin = async (req: Request, response: Response) => {
 
     try {
 
-        const userData: UsersInterface = {
+        const userData: CredentialType = {
+           
             login: body.login,
             password: body.password
         }

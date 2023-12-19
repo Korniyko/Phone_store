@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "./RegisterUser.scss";
 import Button from "./Button";
+import { useHistory } from "react-router-dom";
 
 
 
 
 type RegisterProps = {
     userRegistration: (loginValue, passwordValue) => void
-    userLogin: (loginValue, passwordValue) => void
+    userLogin: (loginValue, passwordValue) => void,
+    userProfile: any
 }
 
 
-const RegisterUser = ({ userRegistration, userLogin }: RegisterProps) => {
+const RegisterUser = ({ userRegistration, userLogin, userProfile }: RegisterProps) => {
+
+
+    console.log(userProfile);
+
+
+    const history = useHistory()
 
     const [loginValue, setloginValue] = useState('')
     const [passwordValue, setPasswordValue] = useState('')
@@ -33,6 +41,14 @@ const RegisterUser = ({ userRegistration, userLogin }: RegisterProps) => {
 
 
     }
+
+    useEffect(() => {
+
+        if (userProfile) {
+
+            history.push('/profile')
+        }
+    }, [userProfile, history])
 
 
     return (

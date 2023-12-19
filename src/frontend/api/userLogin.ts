@@ -1,4 +1,7 @@
 import { application } from "express"
+import { setUser } from "../store/actions";
+import { User } from "../../types";
+
 
 
 
@@ -12,6 +15,7 @@ export const userLogin = (loginValue, passwordValue) => (dispatch: any, getState
     const password = passwordValue
 
     console.log(login, password);
+
 
 
     return fetch('http://localhost:6500/api/userLogin', {
@@ -34,8 +38,15 @@ export const userLogin = (loginValue, passwordValue) => (dispatch: any, getState
         return response
     })
         .then((response: Response) => response.json())
-        .then((data: any) => {
+        .then((user: {user:User}) => {
            
+            if (user) {
+
+                dispatch(setUser(user.user));
+
+            }
+
+
 
 
         })

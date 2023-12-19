@@ -1,18 +1,18 @@
-// import React from "react";
-// import "./Input.scss"
+import React from "react";
+import "./Input.scss"
 
 
-// const Input = (props) => {
-//     const { numberInput} = props;
+const Input = (props) => {
+    const { plus, minus, value, onChange,showInput} = props;
+   
+    return (
+        <div className="input">
+            <div onClick={minus}>-</div>
+            {showInput && <input type="text" value={value} onChange={onChange} />}
+            <div onClick={plus}>+</div>
+        </div>
 
-//     return (
-//         <div className="input">
-//         <div>+</div>
-//         {numberInput && <input type="text" value={numberInput} />}
-//         <div>-</div>
-//     </div>
+    );
+};
 
-//     );
-// };
-
-// export default Input;
+export default Input;
