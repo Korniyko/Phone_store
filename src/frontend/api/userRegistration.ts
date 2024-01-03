@@ -1,17 +1,10 @@
 import { application } from "express"
 
 
-
-
-
-
-
 export const userRegistration = (loginValue, passwordValue) => (dispatch: any, getState: () => any): Promise<void> => {
 
     const login = loginValue;
     const password = passwordValue
-
-    // console.log(login, password);
 
 
     return fetch('http://localhost:6500/api/userRegistration', {
@@ -35,9 +28,7 @@ export const userRegistration = (loginValue, passwordValue) => (dispatch: any, g
     })
         .then((response: Response) => response.json())
         .then((data: any) => {
-            // dispatch((data))
-
-
+          
         })
         .catch((error: Error) => {
             console.error(`Error happend on userRegistration:${error}`)

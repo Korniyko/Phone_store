@@ -3,12 +3,6 @@ import { setUser } from "../store/actions";
 import { User } from "../../types";
 
 
-
-
-
-
-
-
 export const userLogin = (loginValue, passwordValue) => (dispatch: any, getState: () => any): Promise<void> => {
 
     const login = loginValue;
@@ -45,9 +39,6 @@ export const userLogin = (loginValue, passwordValue) => (dispatch: any, getState
                 dispatch(setUser(user.user));
 
             }
-
-
-
 
         })
         .catch((error: Error) => {

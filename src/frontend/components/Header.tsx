@@ -1,4 +1,5 @@
 import React from "react";
+
 import './Header.scss'
 import Logo from '../img/logo.svg'
 import Button from "./Button";
@@ -17,7 +18,7 @@ const Header = ({ selected }: HeaderProps) => {
     const history = useHistory()
 
     return (
-        <header style={headerStyle} >
+        <header style={headerStyle} data-testid="header" >
             <div className="headers container">
                 <div className="logo">
                     <img src={Logo} alt="logo" onClick={() => { history.push('/') }} />
